@@ -10,7 +10,7 @@ class CreateRepairs < ActiveRecord::Migration
       t.boolean :lights
       t.boolean :invertor
       t.boolean :houseWiring
-      t.references :Shopkeeper, index: true, foreign_key: true
+      t.references :shopkeeper, index: true, foreign_key: true
 
       t.timestamps null: false
     end

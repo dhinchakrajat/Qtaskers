@@ -10,7 +10,7 @@ one:
   lights: false
   invertor: false
   houseWiring: false
-  Shopkeeper_id: 
+  shopkeeper_id: 
 
 two:
   tv: false
@@ -22,4 +22,4 @@ two:
   lights: false
   invertor: false
   houseWiring: false
-  Shopkeeper_id: 
+  shopkeeper_id: 

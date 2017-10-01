@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :repairs
   resources :shopkeepers
   get '/' => 'users#home'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171001164453) do
+ActiveRecord::Schema.define(version: 20171001192726) do
 
   create_table "repairs", force: :cascade do |t|
     t.boolean  "tv"
@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 20171001164453) do
     t.boolean  "lights"
     t.boolean  "invertor"
     t.boolean  "houseWiring"
-    t.integer  "Shopkeeper_id"
+    t.integer  "shopkeeper_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
-  add_index "repairs", ["Shopkeeper_id"], name: "index_repairs_on_Shopkeeper_id"
+  add_index "repairs", ["shopkeeper_id"], name: "index_repairs_on_shopkeeper_id"
 
   create_table "shopkeepers", force: :cascade do |t|
     t.string   "shopName"
