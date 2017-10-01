@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shopname:</strong>
+  <%= @shopkeeper.shopName %>
+</p>
+
+<p>
+  <strong>Ownername:</strong>
+  <%= @shopkeeper.ownerName %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @shopkeeper.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @shopkeeper.contact %>
+</p>
+
+<%= link_to 'Edit', edit_shopkeeper_path(@shopkeeper) %> |
+<%= link_to 'Back', shopkeepers_path %>
