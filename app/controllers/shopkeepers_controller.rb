@@ -1,4 +1,5 @@
 class ShopkeepersController < ApplicationController
+  before_filter :authenticate_admin!, only: :index
   before_action :set_shopkeeper, only: [:show, :edit, :update, :destroy]
 
   # GET /shopkeepers

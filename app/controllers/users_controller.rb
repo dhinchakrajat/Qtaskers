@@ -76,7 +76,7 @@ class UsersController < ApplicationController
 		  		else
 					repairs.houseWiring = false
 				end
-				repairs.Shopkeeper_id = shopkeeper.id
+				repairs.shopkeeper_id = shopkeeper.id
 				repairs.save
 			end
 	  		return redirect_to '/'
