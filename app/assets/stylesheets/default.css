@@ -9,7 +9,7 @@ body
 	padding: 0px;
 	background: #261300 url(images/overlay.png) repeat;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 12pt;
+	font-size: 14pt;
 	font-weight: 400;
 	color: #000000;
 }
@@ -307,7 +307,7 @@ ul.contact li a:before
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-size: 1.1em;
+	font-size: 2.1em;
 	color: #6F6F6F;
 }
 
@@ -318,7 +318,7 @@ ul.contact li a:before
 #header-wrapper
 {
 	overflow: hidden;
-	padding: 5em 0em;
+	padding: 0.6em 0em;
 }
 
 #header
@@ -337,7 +337,7 @@ ul.contact li a:before
 
 #logo h1
 {
-	font-size: 3.5em;
+	font-size: 6.5em;
 }
 
 #logo a
@@ -346,11 +346,16 @@ ul.contact li a:before
 	color: #FFF;
 }
 
+#logo a:hover
+{
+	background: none;
+}
+
 #logo span
 {
 	letter-spacing: 0.10em;
 	text-transform: uppercase;
-	font-size: 0.90em;
+	font-size: 1.5em;
 	color: rgba(255,255,255,0.5);
 }
 
@@ -377,6 +382,7 @@ ul.contact li a:before
 #menu li
 {
 	display: inline-block;
+	font-size: 1.8em;
 }
 
 #menu li a, #menu li span
@@ -425,6 +431,17 @@ ul.contact li a:before
 {
 	background: #DC572E;
 }
+#wrapper2 ol
+{
+    list-style-type: decimal;
+}
+#wrapper2 li
+{
+	margin-left: 28px; 
+	font-size: 14pt;
+	line-height: 24pt;
+	text-align: left;
+}
 
 #wrapper3
 {
@@ -447,7 +464,7 @@ ul.contact li a:before
 {
 	overflow: hidden;
 	width: 1000px;
-	padding: 8em 100px 8em 100px;
+	padding: 1.8em 30px 1em 30px;
 	text-align: center;
 	color: rgba(0,0,0,0.6);
 }
@@ -462,8 +479,44 @@ ul.contact li a:before
 	color: rgba(0,0,0,0.8);
 }
 
+#welcome p
+{
+	font-size: 1em;
+}
+
 #welcome a,
 #welcome strong
+{
+	color: rgba(0,0,0,0.8);
+}
+
+
+#welcome2
+{
+	overflow: hidden;
+	width: 700px;
+	padding: 2em 30px 1.8em 30px;
+	text-align: center;
+	color: rgba(0,0,0,0.6);
+}
+
+#welcome2 .content
+{
+	padding: 0em 8em;
+}
+
+#welcome2 .title h2
+{
+	color: rgba(0,0,0,0.8);
+}
+
+#welcome2 p
+{
+	font-size: 1.2em;
+}
+
+#welcome2 a,
+#welcome2 strong
 {
 	color: rgba(0,0,0,0.8);
 }
@@ -514,7 +567,7 @@ ul.contact li a:before
 #copyright
 {
 	overflow: hidden;
-	padding: 5em 0em;
+	padding: 3.8em 0em;
 	border-top: 1px solid rgba(255,255,255,0.08);
 }
 
