@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>S. No.
       <th>Shopname</th>
       <th>Ownername</th>
       <th>Address</th>
@@ -23,8 +24,10 @@
   </thead>
 
   <tbody>
+    <% count = 0 %>
     <% @shopkeepers.each do |shopkeeper| %>
       <tr>
+        <td><%= count = count + 1 %></td>
         <td><%= shopkeeper.shopName %></td>
         <td><%= shopkeeper.ownerName %></td>
         <td><%= shopkeeper.address %></td>
