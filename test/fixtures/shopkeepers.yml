@@ -5,9 +5,27 @@ one:
   ownerName: MyString
   address: MyString
   contact: MyString
+  tv: false
+  laptop: false
+  washingMachine: false
+  refrigerator: false
+  geyser: false
+  ac: false
+  lights: false
+  invertor: false
+  houseWiring: false
 
 two:
   shopName: MyString
   ownerName: MyString
   address: MyString
   contact: MyString
+  tv: false
+  laptop: false
+  washingMachine: false
+  refrigerator: false
+  geyser: false
+  ac: false
+  lights: false
+  invertor: false
+  houseWiring: false

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  resources :repairs
   resources :shopkeepers
+  devise_for :admins
   get '/' => 'users#home'
 
   get 'users/about_us'

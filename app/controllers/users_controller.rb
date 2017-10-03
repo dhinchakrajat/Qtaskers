@@ -12,76 +12,70 @@ class UsersController < ApplicationController
   end
 
   def join_us_submit
-  	sh = Shopkeeper.new;
-  	sh.setVerificationCode("anirudh1234")
-  	if (sh.verifyVerificationCode(params["verification_code"]) == true)
+  	verificationCodeForFormSubmission = "Qtaskers@123"
+  	if (params["verification_code"] == verificationCodeForFormSubmission)
 	  	shopName = params["shop_name"]
 	  	address = params["address"]
 	  	ownerName = params["owner_name"]
 	  	contact = params["phone_number"]
 	  	shopkeeper = Shopkeeper.where(contact: contact).first
-
-	  	if shopkeeper
+	  	if (shopkeeper || shopName == "" || ownerName == "" || address == "" || contact == "")
 	  		return redirect_to '/'
 	  	else
 	  		shopkeeper = Shopkeeper.new
 	  		shopkeeper.shopName = shopName
 	  		shopkeeper.ownerName = ownerName
 	  		shopkeeper.address = address
-	      	shopkeeper.contact = contact
-	  		if(shopkeeper.save)
-		  		repairs = Repair.new
-		  		if(params["tvRepair"] == "on")
-		  			repairs.tv = true
+      	shopkeeper.contact = contact
+	  		if(params["tvRepair"] == "on")
+	  			shopkeeper.tv = true
 				else
-					repairs.tv = false
+					shopkeeper.tv = false
 				end
 		  		if(params["laptopRepair"] == "on")
-		  			repairs.laptop = true
+		  			shopkeeper.laptop = true
 		  		else
-					repairs.laptop = false
+					shopkeeper.laptop = false
 				end
 		  		if(params["washingMachineRepair"] == "on")
-		  			repairs.washingMachine = true
+		  			shopkeeper.washingMachine = true
 		  		else
-					repairs.washingMachine = false
+					shopkeeper.washingMachine = false
 				end
 		  		if(params["refrigeratorRepair"] == "on")
-		  			repairs.refrigerator = true
+		  			shopkeeper.refrigerator = true
 		  		else
-					repairs.refrigerator = false
+					shopkeeper.refrigerator = false
 				end
 		  		if(params["geyserRepair"] == "on")
-		  			repairs.geyser = true
+		  			shopkeeper.geyser = true
 		  		else
-					repairs.geyser = false
+					shopkeeper.geyser = false
 				end
 		  		if(params["acRepair"] == "on")
-		  			repairs.ac = true
+		  			shopkeeper.ac = true
 		  		else
-					repairs.ac = false
+					shopkeeper.ac = false
 				end
 		  		if(params["lightsRepair"] == "on")
-		  			repairs.lights = true
+		  			shopkeeper.lights = true
 		  		else
-					repairs.lights = false
+					shopkeeper.lights = false
 				end
 		  		if(params["invertorRepair"] == "on")
-		  			repairs.invertor = true
+		  			shopkeeper.invertor = true
 		  		else
-					repairs.invertor = false
+					shopkeeper.invertor = false
 				end
 				if(params["houseWiringRepair"] == "on")
-		  			repairs.houseWiring = true
+		  			shopkeeper.houseWiring = true
 		  		else
-					repairs.houseWiring = false
+					shopkeeper.houseWiring = false
 				end
-				repairs.shopkeeper_id = shopkeeper.id
-				repairs.save
-			end
-	  		return redirect_to '/'
-	  	end
-	  else
+				shopkeeper.save
+		  		return redirect_to '/'
+		  	end
+	  	else
 	  		return redirect_to '/'
   	end
   end

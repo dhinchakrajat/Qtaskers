@@ -18,7 +18,7 @@ class ShopkeepersControllerTest < ActionController::TestCase
 
   test "should create shopkeeper" do
     assert_difference('Shopkeeper.count') do
-      post :create, shopkeeper: { address: @shopkeeper.address, contact: @shopkeeper.contact, ownerName: @shopkeeper.ownerName, shopName: @shopkeeper.shopName }
+      post :create, shopkeeper: { ac: @shopkeeper.ac, address: @shopkeeper.address, contact: @shopkeeper.contact, geyser: @shopkeeper.geyser, houseWiring: @shopkeeper.houseWiring, invertor: @shopkeeper.invertor, laptop: @shopkeeper.laptop, lights: @shopkeeper.lights, ownerName: @shopkeeper.ownerName, refrigerator: @shopkeeper.refrigerator, shopName: @shopkeeper.shopName, tv: @shopkeeper.tv, washingMachine: @shopkeeper.washingMachine }
     end
 
     assert_redirected_to shopkeeper_path(assigns(:shopkeeper))
@@ -35,7 +35,7 @@ class ShopkeepersControllerTest < ActionController::TestCase
   end
 
   test "should update shopkeeper" do
-    patch :update, id: @shopkeeper, shopkeeper: { address: @shopkeeper.address, contact: @shopkeeper.contact, ownerName: @shopkeeper.ownerName, shopName: @shopkeeper.shopName }
+    patch :update, id: @shopkeeper, shopkeeper: { ac: @shopkeeper.ac, address: @shopkeeper.address, contact: @shopkeeper.contact, geyser: @shopkeeper.geyser, houseWiring: @shopkeeper.houseWiring, invertor: @shopkeeper.invertor, laptop: @shopkeeper.laptop, lights: @shopkeeper.lights, ownerName: @shopkeeper.ownerName, refrigerator: @shopkeeper.refrigerator, shopName: @shopkeeper.shopName, tv: @shopkeeper.tv, washingMachine: @shopkeeper.washingMachine }
     assert_redirected_to shopkeeper_path(assigns(:shopkeeper))
   end
 

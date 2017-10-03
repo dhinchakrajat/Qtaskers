@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171001202719) do
+ActiveRecord::Schema.define(version: 20171003172348) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -31,7 +31,11 @@ ActiveRecord::Schema.define(version: 20171001202719) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
-  create_table "repairs", force: :cascade do |t|
+  create_table "shopkeepers", force: :cascade do |t|
+    t.string   "shopName"
+    t.string   "ownerName"
+    t.string   "address"
+    t.string   "contact"
     t.boolean  "tv"
     t.boolean  "laptop"
     t.boolean  "washingMachine"
@@ -41,20 +45,8 @@ ActiveRecord::Schema.define(version: 20171001202719) do
     t.boolean  "lights"
     t.boolean  "invertor"
     t.boolean  "houseWiring"
-    t.integer  "shopkeeper_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  add_index "repairs", ["shopkeeper_id"], name: "index_repairs_on_shopkeeper_id"
-
-  create_table "shopkeepers", force: :cascade do |t|
-    t.string   "shopName"
-    t.string   "ownerName"
-    t.string   "address"
-    t.string   "contact"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

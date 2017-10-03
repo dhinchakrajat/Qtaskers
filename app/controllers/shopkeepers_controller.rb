@@ -70,6 +70,6 @@ class ShopkeepersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shopkeeper_params
-      params.require(:shopkeeper).permit(:shopName, :ownerName, :address, :contact)
+      params.require(:shopkeeper).permit(:shopName, :ownerName, :address, :contact, :tv, :laptop, :washingMachine, :refrigerator, :geyser, :ac, :lights, :invertor, :houseWiring)
     end
 end
